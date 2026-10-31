@@ -1,0 +1,67 @@
+.lp-gradient-editor {
+  --lp-gradient-accent: #4f46e5;
+  --lp-gradient-surface: #fff;
+  --lp-gradient-text: #172033;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 36rem;
+  padding: 1rem;
+  border: 1px solid #aeb8c7;
+  border-radius: 0.5rem;
+  background: var(--lp-gradient-surface);
+  color: var(--lp-gradient-text);
+  font:
+    1rem/1.5 system-ui,
+    sans-serif;
+}
+.lp-gradient-editor label {
+  display: grid;
+  gap: 0.25rem;
+}
+.lp-gradient-editor input,
+.lp-gradient-editor select,
+.lp-gradient-editor textarea,
+.lp-gradient-editor button {
+  min-width: 0;
+  max-width: 100%;
+  font: inherit;
+  accent-color: var(--lp-gradient-accent);
+}
+.lp-gradient-editor button {
+  min-height: 2.75rem;
+  cursor: pointer;
+}
+.lp-gradient-editor button:disabled {
+  cursor: not-allowed;
+}
+.lp-gradient-editor__preview {
+  min-height: 7rem;
+  border: 1px solid #aeb8c7;
+  border-radius: 0.25rem;
+}
+.lp-gradient-editor__stops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.lp-gradient-editor__stops [aria-pressed='true'] {
+  outline: 2px solid var(--lp-gradient-accent);
+}
+.lp-gradient-editor__swatch {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #7b8494;
+  margin-right: 0.5rem;
+}
+.lp-gradient-editor__controls {
+  display: grid;
+  gap: 0.5rem;
+}
+.lp-gradient-editor :focus-visible {
+  outline: 3px solid var(--lp-gradient-accent);
+  outline-offset: 3px;
+}
+.lp-gradient-editor [role='alert'] {
+  color: #b91c1c;
+}
